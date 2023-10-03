@@ -10,23 +10,21 @@ Algoritm RaamatuteJärjestamine(raamatud):
                 riiuliKõrgus = saaKõrgus(riiulilolevRaamat)
                 if kõrgus < riiuliKõrgus:
                     lisaRaamatVasakule(raamat, riiul, riiulilolevRaamat)
-                    leitud = true
-                    break
+                    leitud = true 
                 else if kõrgus > riiuliKõrgus:
                     lisaRaamatParemale(raamat, riiul, riiulilolevRaamat)
                     leitud = true
-                    break
             if not leitud:
                 lisaRaamatRiiuliLõppu(raamat, riiul)
 
 Tegevus lisaRaamatRiiulisse(raamat, riiul):
     lisa raamat riiuli lõppu
 
-Tegevus lisaRaamatVasakule(raamat, riiul, riiuliOlevRaamat):
-    lisa raamat enne riiuliOlevRaamat
+Tegevus lisaRaamatVasakule(raamat, riiul, riiulilolevRaamat):
+    lisa raamat enne riiulilolevRaamat
 
-Tegevus lisaRaamatParemale(raamat, riiul, riiuliOlevRaamat):
-    lisa raamat pärast riiuliOlevRaamat
+Tegevus lisaRaamatParemale(raamat, riiul, riiulilolevRaamat):
+    lisa raamat pärast riiulilolevRaamat
 
 Funktsioon saaKõrgus(raamat):
     tagasta raamatu kõrgus
