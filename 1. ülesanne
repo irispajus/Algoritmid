@@ -1,0 +1,32 @@
+Algoritm RaamatuteJärjestamine(raamatud):
+    loo tühi riiul
+    for iga raamat raamatud-s:
+        kõrgus = saaKõrgus(raamat)
+        if riiul on tühi:
+            lisaRaamatRiiulisse(raamat, riiul)
+        else:
+            leitud = false
+            for iga riiulis olevRaamat riiul-s:
+                riiuliKõrgus = saaKõrgus(riiulilolevRaamat)
+                if kõrgus < riiuliKõrgus:
+                    lisaRaamatVasakule(raamat, riiul, riiulilolevRaamat)
+                    leitud = true
+                    break
+                else if kõrgus > riiuliKõrgus:
+                    lisaRaamatParemale(raamat, riiul, riiulilolevRaamat)
+                    leitud = true
+                    break
+            if not leitud:
+                lisaRaamatRiiuliLõppu(raamat, riiul)
+
+Tegevus lisaRaamatRiiulisse(raamat, riiul):
+    lisa raamat riiuli lõppu
+
+Tegevus lisaRaamatVasakule(raamat, riiul, riiuliOlevRaamat):
+    lisa raamat enne riiuliOlevRaamat
+
+Tegevus lisaRaamatParemale(raamat, riiul, riiuliOlevRaamat):
+    lisa raamat pärast riiuliOlevRaamat
+
+Funktsioon saaKõrgus(raamat):
+    tagasta raamatu kõrgus
