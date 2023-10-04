@@ -1,5 +1,5 @@
 def leia_numbri_koht(list, sisestatud_number):
-    vasak = 1
+    vasak = 0
     parem = len(list) 
 
     while vasak <= parem:
