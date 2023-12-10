@@ -61,6 +61,8 @@ class eraldi_aheldamisega_räsitabel:
 # siin osas on andmed, millega koodi tööd testida
 räsitabel = eraldi_aheldamisega_räsitabel(suurus = 20)
 
+# NB! võtmete konverteerimisel ASCII koodi tühikut
+# (väärtus 32) sisse ei arvestanud
 räsitabel.insert("John Doe", 19)
 räsitabel.insert("Jane Doe", 19) # siin ei ole jääk 19, vaid kasutasin lihtsalt testimiseks
 räsitabel.insert("Marie Dubois", 8)
