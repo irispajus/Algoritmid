@@ -56,3 +56,14 @@ räsitabel.insert("Harry Potter", 0 )
 print(räsitabel.get("John Doe")) 
 print(räsitabel.get("Jane Doe")) 
 print(räsitabel.get("Marie Dubois"))
+
+# räsitabel on loodud mul mingi kindla suurusega listina (23 väärtust/rida),
+# seega ruumikomplekssus on O(N). Isegi kui mul on sisestatud tabelisse vaid
+# neli test võtit koos räsi väärtusega. Kasutatud tehete muutujatel on ruumiline
+# komplekssus O(1), kuna tegemist on konstantidega
+
+# ajaline keerukus sõltub kindlasti tabelis suurusest ja sellest kui palju ma
+# elemente sinna olen juba lisanud. Kui tabel väga suureks läheb ja kokkupõrkeid
+# hakkab rohkem tekkima siis muutub ka ajaline keerukus. Kasutatud insert ja get 
+# on parimal juhul O(1) kui lisatud ja otsitud võti on tabelis esimene või ainuke. 
+# Ning O(N) halvimal juhul, kui uue võtme lisamiseks tuleb läbi käia terve list. 
