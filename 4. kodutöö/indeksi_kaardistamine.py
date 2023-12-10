@@ -1,7 +1,7 @@
 # triviaalne räsimine- võtit kasutatakse räsitabelis indeksina, räsi 
 # väärtus salvestatakse sellel samal indeksil
 
-class eraldi_aheldamisega_räsitabel:
+class indeksi_kaardistamisega_räsitabel:
     def __init__(self, suurus):
         self.suurus = suurus
         self.table = [None] * suurus
@@ -39,7 +39,7 @@ class eraldi_aheldamisega_räsitabel:
         return None
 
 # siin osas on andmed, millega koodi tööd testida
-räsitabel = eraldi_aheldamisega_räsitabel (suurus = 20)
+räsitabel = indeksi_kaardistamisega_räsitabel (suurus = 20)
 
 räsitabel.insert("John Doe", 19)
 räsitabel.insert("Jane Doe", 19)
@@ -51,3 +51,12 @@ print(räsitabel.get("Jane Doe"))
 print(räsitabel.get("Marie Dubois")) 
 
 # ValueError: too many values to unpack (expected 2) ühel ja samal indeksil on 2 väärtust
+
+# ruumikomplekssus antud programmil on O(N), kuna salvastada 
+# tuleb testimise osas kasutatud tabel
+
+# ajakompleksus antud programmil on mõjutatud kasutatud võtmete
+# pikkusest, räsi genereerimisest ja testimise osas insert ja get 
+# funktsioonidest. Mainitud funktsioonidel on keskmine ajakeerukus 
+# O(1), räsifunktsiooni ajakeerukust antud võtmest genereerimisel 
+# tuleks eraldi hinnata
